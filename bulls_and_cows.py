@@ -108,11 +108,11 @@ def validate_input(n):
     if not n:
         return None
     if len(n) != 4:
-        raise ValueError("The number should be 4 digits long")
+        sys.exit("Error: The number should be 4 digits long!")
     if not n.isdigit():
-        raise ValueError("The number should be digits only")
+        sys.exit("Error: The number should be digits only!")
     if len(set(n)) != 4:
-        raise ValueError("The number should have 4 distinct digits")
+        sys.exit("Error: The number should have 4 distinct digits!")
     return [int(digit) for digit in n]
 
 
